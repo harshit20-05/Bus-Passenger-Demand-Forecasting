@@ -1,0 +1,167 @@
+{
+  "champion_model_name": "HistGradientBoostingRegressor",
+  "test_metrics": {
+    "baseline": {
+      "MAE": 7.841,
+      "RMSE": 10.351,
+      "WAPE": 15.98
+    },
+    "champion": {
+      "MAE": 6.129,
+      "RMSE": 8.493,
+      "WAPE": 12.49
+    }
+  },
+  "route_wise_metrics": {
+    "CHD-JAL": {
+      "MAE": 4.354,
+      "RMSE": 5.601,
+      "WAPE": 11.52,
+      "trip_count": 220,
+      "mean_actual": 37.8
+    },
+    "CHD-MNL": {
+      "MAE": 9.929,
+      "RMSE": 13.169,
+      "WAPE": 19.07,
+      "trip_count": 329,
+      "mean_actual": 52.06
+    },
+    "CHD-SML": {
+      "MAE": 8.831,
+      "RMSE": 11.78,
+      "WAPE": 18.57,
+      "trip_count": 329,
+      "mean_actual": 47.56
+    },
+    "DEL-CHD": {
+      "MAE": 5.414,
+      "RMSE": 6.844,
+      "WAPE": 9.4,
+      "trip_count": 329,
+      "mean_actual": 57.59
+    },
+    "DEL-DDN": {
+      "MAE": 4.162,
+      "RMSE": 5.182,
+      "WAPE": 11.29,
+      "trip_count": 220,
+      "mean_actual": 36.85
+    },
+    "DEL-JAI": {
+      "MAE": 4.623,
+      "RMSE": 5.847,
+      "WAPE": 7.59,
+      "trip_count": 329,
+      "mean_actual": 60.93
+    },
+    "LDH-ASR": {
+      "MAE": 4.193,
+      "RMSE": 5.331,
+      "WAPE": 10.46,
+      "trip_count": 220,
+      "mean_actual": 40.07
+    },
+    "LDH-DEL": {
+      "MAE": 5.403,
+      "RMSE": 6.728,
+      "WAPE": 11.1,
+      "trip_count": 220,
+      "mean_actual": 48.7
+    }
+  },
+  "peak_vs_offpeak_metrics": {
+    "Off_Peak_Hours": {
+      "MAE": 5.916,
+      "RMSE": 8.049,
+      "WAPE": 14.53,
+      "trip_count": 660,
+      "mean_actual": 40.7
+    },
+    "Peak_Hours": {
+      "MAE": 6.22,
+      "RMSE": 8.676,
+      "WAPE": 11.82,
+      "trip_count": 1536,
+      "mean_actual": 52.64
+    }
+  },
+  "strongest_route": {
+    "route_id": "DEL-JAI",
+    "metrics": {
+      "MAE": 4.623,
+      "RMSE": 5.847,
+      "WAPE": 7.59,
+      "trip_count": 329,
+      "mean_actual": 60.93
+    }
+  },
+  "weakest_route": {
+    "route_id": "CHD-MNL",
+    "metrics": {
+      "MAE": 9.929,
+      "RMSE": 13.169,
+      "WAPE": 19.07,
+      "trip_count": 329,
+      "mean_actual": 52.06
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "season",
+      "importance_mean": -0.017336601734528466,
+      "importance_std": 0.0014165729583667974
+    },
+    {
+      "feature": "month",
+      "importance_mean": -6.152216619503825e-05,
+      "importance_std": 1.8084367886660498e-05
+    },
+    {
+      "feature": "destination",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "is_weekend",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "bus_capacity",
+      "importance_mean": 0.0032025263413109515,
+      "importance_std": 0.00035535587909074347
+    },
+    {
+      "feature": "route_id",
+      "importance_mean": 0.07572611647580015,
+      "importance_std": 0.003711172417865152
+    },
+    {
+      "feature": "origin",
+      "importance_mean": 0.09277790135698445,
+      "importance_std": 0.005799213096313036
+    },
+    {
+      "feature": "departure_hour",
+      "importance_mean": 0.14973361895388884,
+      "importance_std": 0.004794517621448297
+    },
+    {
+      "feature": "is_peak_hour",
+      "importance_mean": 0.16635937633435605,
+      "importance_std": 0.00875163229550294
+    },
+    {
+      "feature": "historical_route_demand",
+      "importance_mean": 0.3741516195785852,
+      "importance_std": 0.008473890845769232
+    },
+    {
+      "feature": "day_of_week",
+      "importance_mean": 0.4035890172298986,
+      "importance_std": 0.005512298409097411
+    }
+  ],
+  "test_sample_size": 2196
+}

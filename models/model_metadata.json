@@ -1,0 +1,165 @@
+{
+  "champion_model_name": "HistGradientBoostingRegressor",
+  "champion_params": {
+    "max_iter": 150,
+    "learning_rate": 0.05,
+    "max_depth": 10,
+    "min_samples_leaf": 15,
+    "l2_regularization": 0.5
+  },
+  "validation_metrics": {
+    "baseline": {
+      "MAE": 6.752,
+      "RMSE": 9.216,
+      "WAPE": 13.88
+    },
+    "random_forest": {
+      "MAE": 6.946,
+      "RMSE": 9.581,
+      "WAPE": 14.28
+    },
+    "hist_gradient_boosting": {
+      "MAE": 5.886,
+      "RMSE": 8.06,
+      "WAPE": 12.1
+    },
+    "champion": {
+      "MAE": 5.886,
+      "RMSE": 8.06,
+      "WAPE": 12.1
+    }
+  },
+  "feature_columns": [
+    "route_id",
+    "origin",
+    "destination",
+    "departure_hour",
+    "day_of_week",
+    "month",
+    "season",
+    "is_weekend",
+    "is_peak_hour",
+    "bus_capacity",
+    "historical_route_demand"
+  ],
+  "categorical_columns": [
+    "route_id",
+    "origin",
+    "destination",
+    "season"
+  ],
+  "numeric_columns": [
+    "departure_hour",
+    "day_of_week",
+    "month",
+    "is_weekend",
+    "is_peak_hour",
+    "bus_capacity",
+    "historical_route_demand",
+    "sin_hour",
+    "cos_hour",
+    "sin_day_of_week",
+    "cos_day_of_week",
+    "sin_month",
+    "cos_month"
+  ],
+  "route_stats": {
+    "CHD-JAL": {
+      "historical_mean": 35.115121951219514,
+      "historical_median": 35.0,
+      "origin": "Chandigarh",
+      "destination": "Jalandhar",
+      "common_capacity": 40
+    },
+    "CHD-MNL": {
+      "historical_mean": 45.556278464541315,
+      "historical_median": 43.0,
+      "origin": "Chandigarh",
+      "destination": "Manali",
+      "common_capacity": 45
+    },
+    "CHD-SML": {
+      "historical_mean": 42.08132726089785,
+      "historical_median": 41.0,
+      "origin": "Chandigarh",
+      "destination": "Shimla",
+      "common_capacity": 40
+    },
+    "DEL-CHD": {
+      "historical_mean": 53.325959661678596,
+      "historical_median": 53.0,
+      "origin": "Delhi",
+      "destination": "Chandigarh",
+      "common_capacity": 45
+    },
+    "DEL-DDN": {
+      "historical_mean": 40.06048780487805,
+      "historical_median": 40.0,
+      "origin": "Delhi",
+      "destination": "Dehradun",
+      "common_capacity": 50
+    },
+    "DEL-JAI": {
+      "historical_mean": 49.75927130774235,
+      "historical_median": 49.0,
+      "origin": "Delhi",
+      "destination": "Jaipur",
+      "common_capacity": 55
+    },
+    "LDH-ASR": {
+      "historical_mean": 37.48975609756098,
+      "historical_median": 37.0,
+      "origin": "Ludhiana",
+      "destination": "Amritsar",
+      "common_capacity": 50
+    },
+    "LDH-DEL": {
+      "historical_mean": 44.93365853658537,
+      "historical_median": 45.0,
+      "origin": "Ludhiana",
+      "destination": "Delhi",
+      "common_capacity": 50
+    }
+  },
+  "data_quality_report": {
+    "initial_rows": 14640,
+    "retained_rows": 14640,
+    "duplicate_rows_removed": 0,
+    "missing_values": {
+      "trip_id": 0,
+      "route_id": 0,
+      "origin": 0,
+      "destination": 0,
+      "departure_datetime": 0,
+      "departure_hour": 0,
+      "day_of_week": 0,
+      "month": 0,
+      "season": 0,
+      "is_weekend": 0,
+      "is_peak_hour": 0,
+      "bus_capacity": 0,
+      "historical_route_demand": 0,
+      "passenger_count": 0
+    },
+    "passenger_count_q25": 35.0,
+    "passenger_count_q75": 55.0,
+    "passenger_count_iqr": 20.0,
+    "outlier_bounds": [
+      5.0,
+      85.0
+    ],
+    "outliers_detected": 156
+  },
+  "training_date_range": [
+    "2024-01-01 07:30:00",
+    "2024-09-13 08:45:00"
+  ],
+  "validation_date_range": [
+    "2024-09-13 09:15:00",
+    "2024-11-07 07:30:00"
+  ],
+  "test_date_range": [
+    "2024-11-07 08:00:00",
+    "2024-12-31 22:45:00"
+  ]
+}
