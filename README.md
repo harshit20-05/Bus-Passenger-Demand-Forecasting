@@ -162,7 +162,7 @@ All models were evaluated on the **untouched chronological test partition** (2,1
 
 ### Step 1: Clone Repository & Create Virtual Environment
 ```bash
-git clone https://github.com/your-username/Bus-Passenger-Demand-Forecasting.git
+git clone https://github.com/harshit20-05/Bus-Passenger-Demand-Forecasting.git
 cd Bus-Passenger-Demand-Forecasting
 
 python -m venv venv
