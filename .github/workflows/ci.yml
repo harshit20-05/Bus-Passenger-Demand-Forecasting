@@ -28,3 +28,4 @@ jobs:
     - name: Execute automated test suite (Pytest)
       run: |
         python -m pytest tests/ -v --tb=short
+
