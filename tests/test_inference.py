@@ -121,3 +121,4 @@ def test_underutilization_alert(model_exists):
     assert result["occupancy_percentage"] < 50.0
     assert result["alert_level"] == "UNDERUTILIZED"
     assert "Underutilization" in result["demand_category"]
+

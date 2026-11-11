@@ -175,3 +175,4 @@ def prepare_features_and_targets(
     y_test = test_df[TARGET_COLUMN].copy()
 
     return X_train, y_train, X_val, y_val, X_test, y_test
+

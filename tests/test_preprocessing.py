@@ -94,3 +94,4 @@ def test_feature_pipeline_fit_transform(sample_dataset):
     assert X_train_trans.shape[0] == len(X_train)
     assert X_val_trans.shape[0] == len(X_val)
     assert X_test_trans.shape[0] == len(X_test)
+

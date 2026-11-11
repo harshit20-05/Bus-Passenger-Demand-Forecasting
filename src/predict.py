@@ -209,3 +209,33 @@ def predict_demand(
         "explanation_factors": explanation_factors,
         "champion_model_name": artifact.get("champion_model_name", "Unknown"),
     }
+
+
+if __name__ == "__main__":
+    import argparse
+    import json
+
+    parser = argparse.ArgumentParser(description="Bus Passenger-Demand Forecasting Inference CLI")
+    parser.add_argument("--route", type=str, default="DEL-CHD", help="Route Corridor ID (e.g. DEL-CHD, CHD-MNL)")
+    parser.add_argument("--departure", type=str, default="2025-06-20 08:30:00", help="Departure datetime (YYYY-MM-DD HH:MM:SS)")
+    parser.add_argument("--capacity", type=int, default=45, help="Bus vehicle capacity (seats)")
+    parser.add_argument("--model", type=str, default="models/best_model.joblib", help="Path to trained joblib artifact")
+
+    args = parser.parse_args()
+
+    print(f"\n--- Running Inference for Route: {args.route} at {args.departure} (Capacity: {args.capacity}) ---")
+    prediction = predict_demand(
+        route_id=args.route,
+        departure_datetime=args.departure,
+        bus_capacity=args.capacity,
+        model_path=args.model,
+    )
+
+    print("\n--- Forecast Results ---")
+    for key, val in prediction.items():
+        if key == "explanation_factors":
+            print("  Explanation Factors:")
+            for factor in val:
+                print(f"    - {factor}")
+        else:
+            print(f"  {key}: {val}")

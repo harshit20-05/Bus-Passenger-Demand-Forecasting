@@ -612,3 +612,4 @@ elif app_mode == "ℹ️ About the Model":
 
 st.markdown("---")
 st.caption("Algions AI Labs Private Limited | AI & ML Internship Technical Assessment | Production Machine Learning System")
+

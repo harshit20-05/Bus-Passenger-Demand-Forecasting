@@ -123,3 +123,4 @@ def calculate_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> Dict[str, float
         "RMSE": round(rmse, 3),
         "WAPE": round(wape, 2),
     }
+

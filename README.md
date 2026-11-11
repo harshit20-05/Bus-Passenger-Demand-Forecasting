@@ -262,3 +262,4 @@ The web dashboard is organized into 5 intuitive modules:
 
 ---
 *Built with passion for Algions AI Labs Private Limited Assessment.*
+

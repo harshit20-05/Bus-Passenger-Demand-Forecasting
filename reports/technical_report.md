@@ -268,3 +268,4 @@ The system includes a production-grade Streamlit web application (`app/streamlit
    *Defense:* HistGradientBoosting builds trees sequentially by fitting pseudo-residuals, effectively capturing non-linear interactions between calendar month, day of week, and departure hour. On our validation split, HistGradientBoosting achieved a WAPE of 12.10% compared to 14.28% for Random Forest, with $5\times$ faster training via histogram binning.
 4. **Q: Why evaluate using WAPE instead of MAPE?**  
    *Defense:* Standard MAPE divides each individual error by the true value, which blows up to infinity or extreme values when actual passenger counts are low or zero. WAPE divides the sum of absolute errors by the total actual passengers, providing a robust, volume-weighted error metric.
+
